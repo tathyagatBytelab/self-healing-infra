@@ -82,9 +82,9 @@ Prometheus will detect it, Alertmanager will fire an alert, and Ansible will res
 ### 4. Alertmanager Triggered  
 [![alertmanager](screenshots/4.png)](https://github.com/tathyagatBytelab/self-healing-infra/blob/main/screenshots/4.png)
 
-### 5. Ansible Healing Log *(placeholder)*  
+### 5. Ansible Healing Log   
 [![ansible log](screenshots/5.png)](https://github.com/tathyagatBytelab/self-healing-infra/blob/main/screenshots/5.png)
 
-### 6. Container Restored *(placeholder)*  
+### 6. Container Restored   
 [![container restored](screenshots/6.png)](https://github.com/tathyagatBytelab/self-healing-infra/blob/main/screenshots/6.png)
  
