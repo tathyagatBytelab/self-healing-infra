@@ -1,0 +1,12 @@
+groups:
+- name: AppDown
+  rules:
+  - alert: AppDown
+    expr: up{job="app"} == 0
+    for: 10s
+    labels:
+      severity: critical
+    annotations:
+      summary: "App is down"
+      description: "The self-healing app is not responding on port 3000."
+

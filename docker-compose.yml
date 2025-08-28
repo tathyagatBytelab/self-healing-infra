@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  app:
+    build: ./app
+    container_name: self-healing-app
+    ports:
+      - "3000:3000"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alert-rules.yml:/etc/prometheus/alert-rules.yml
+    ports:
+      - "9090:9090"
+
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+
+  alertmanager:
+    image: prom/alertmanager
+    container_name: alertmanager
+    volumes:
+      - ./alert.yml:/etc/alertmanager/config.yml
+    ports:
+      - "9093:9093"
+
+

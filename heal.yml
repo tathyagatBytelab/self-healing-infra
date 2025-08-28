@@ -1,0 +1,6 @@
+- name: Self-Healing Playbook
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Restart self-healing-app container
+      command: docker restart self-healing-app
